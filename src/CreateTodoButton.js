@@ -1,4 +1,4 @@
-function CreateTodoButton(props) {
+function CreateTodoButton() {
     return (
         <button>+</button>
     )

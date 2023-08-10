@@ -3,28 +3,36 @@ import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
-import './App.css';
+import React from 'react';
+
+const defaultTools = [
+  {text: 'Cortar cebolla', completed: false},
+  {text: 'Tomar curso de intro react.js', completed: true},
+  {text: 'Llorar por el trabajo', completed: false},
+  {text: 'Renunciar', completed: false},
+]
 
 function App() {
   return (
-    <div className="App">
+    <>
 
       <TodoCounter completed={16} total={25}/>
       <TodoSearch/>
 
       <TodoList>
-        <TodoItem/>
-        <TodoItem/>
-        <TodoItem/>
-        <TodoItem/>
+        {defaultTools.map(todo => (
+          <TodoItem 
+          key={todo.text}
+          text={todo.text}
+          completed={todo.completed}
+          />
+        ))}
       </TodoList>
 
     <CreateTodoButton/> 
-    </div>
+    </>
   );
 }
-
-
 
 
 export default App;
