@@ -10,6 +10,7 @@ const defaultTodos = [
   { text: 'Tomar el Curso de Intro a React.js', completed: false },
   { text: 'Llorar con la Llorona', completed: false },
   { text: 'LALALALALA', completed: false },
+  { text: 'Manipular variables dinamicas', completed: true },
 ];
 
 function App() {
